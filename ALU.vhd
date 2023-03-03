@@ -24,19 +24,19 @@ begin
 			when "100" => Resultado <= Operando1 nor Operando2;
 			when "101" => Resultado <= Operando1 xor Operando2;
 			when "110" => 
-					if (Operando1 < Operando2) then	
+					if Operando1 < Operando2 then	
 					E_FLAG(0) <= '1';
 					end if;
-					if (Operando1 <= Operando2) then	
+					if Operando1 <= Operando2 then	
 					E_FLAG(1) <= '1';
 					end if;
-					if (Operando1 = Operando2) then	
+					if Operando1 = Operando2 then	
 					E_FLAG(2) <= '1';
 					end if;
-					if (Operando1 > Operando2) then	
+					if Operando1 > Operando2 then	
 					E_FLAG(3) <= '1';
 					end if;
-					if (Operando1 >= Operando2) then	
+					if Operando1 >= Operando2 then	
 					E_FLAG(4) <= '1';
 					end if;
 		end case;

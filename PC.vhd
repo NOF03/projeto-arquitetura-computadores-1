@@ -16,7 +16,7 @@ begin
 
 	process(reset)
 	begin
-		if (reset <= '1') then
+		if reset = '1' then
 			Endereco <= (others => '0');
 		end if;
 	end process;
@@ -24,7 +24,7 @@ begin
 	process(clk)
 	
 	begin
-		if (ESCR_PC <= '0' and reset <= '0' and rising_edge(clk)) then
+		if ESCR_PC = '0' and reset = '0' and rising_edge(clk) then
 			Endereco <= Constante + "00000001";
 		else
 			Endereco <= Constante;

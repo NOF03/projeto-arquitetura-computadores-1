@@ -15,7 +15,7 @@ begin
 	process(Dados_R, SEL_R, ESCR_R, clk)
 	
 		begin 
-			if (SEL_R <= '0' and rising_edge(clk) and ESCR_R <= '1') then
+			if SEL_R = '0' and rising_edge(clk) and ESCR_R = '1' then
 				Operando1 <= Dados_R;
 			end if;
 	

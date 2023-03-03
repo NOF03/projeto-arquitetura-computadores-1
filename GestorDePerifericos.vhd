@@ -16,10 +16,10 @@ begin
 	process(PIN, Operando1, ESCR_P, clk)
 		begin
 		
-		if (ESCR_P <= '0') then
+		if ESCR_P = '0' then
 			Dados_IN <= PIN;
 		else 
-			if (rising_edge(clk)) then
+			if rising_edge(clk) then
 				POUT <= Operando1;
 			end if;
 		end if;

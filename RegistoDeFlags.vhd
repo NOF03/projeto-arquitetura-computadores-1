@@ -14,7 +14,7 @@ architecture Behavioral of RegistoDeFlags is
 begin
 	process(rising_edge(clk))
 		begin
-			if (ESCR_FLAG <= '1') then
+			if ESCR_FLAG = '1' then
 
 					case SEL_FLAG is
 						when "000" => S_FLAG <= E_FLAG(0);
