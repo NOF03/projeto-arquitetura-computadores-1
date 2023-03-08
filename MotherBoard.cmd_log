@@ -1,0 +1,25 @@
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+xst -intstyle ise -ifn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.xst" -ofn "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-2 MotherBoard.ngc MotherBoard.ngd  
+map -intstyle ise -p xc7a100t-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o MotherBoard_map.ncd MotherBoard.ngd MotherBoard.pcf 
+par -w -intstyle ise -ol high -mt off MotherBoard_map.ncd MotherBoard.ncd MotherBoard.pcf 
+trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MotherBoard.twx MotherBoard.ncd -o MotherBoard.twr MotherBoard.pcf 

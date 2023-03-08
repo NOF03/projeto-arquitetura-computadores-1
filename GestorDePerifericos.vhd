@@ -21,11 +21,9 @@ begin
 		else 
 			if rising_edge(clk) then
 				POUT <= Operando1;
+				
 			end if;
 		end if;
-		
-		
-		
 	end process;
 end Behavioral;
 

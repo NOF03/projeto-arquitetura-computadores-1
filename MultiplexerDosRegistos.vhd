@@ -1,16 +1,16 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity MUX_R is
+entity MultiplexerDosRegistos is
     Port ( Dados_IN : in  STD_LOGIC_VECTOR (7 downto 0);
            Dados_M : in  STD_LOGIC_VECTOR (7 downto 0);
            Resultado : in  STD_LOGIC_VECTOR (7 downto 0);
            Constante : in  STD_LOGIC_VECTOR (7 downto 0);
            SEL_Data : in  STD_LOGIC_VECTOR (1 downto 0);
            Dados_R : out  STD_LOGIC_VECTOR (7 downto 0));
-end MUX_R;
+end MultiplexerDosRegistos;
 
-architecture Behavioral of MUX_R is
+architecture Behavioral of MultiplexerDosRegistos is
 
 begin
 	process(Dados_IN, Dados_M, Resultado, Constante, SEL_Data)

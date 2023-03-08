@@ -12,9 +12,9 @@ end RegistoDeFlags;
 architecture Behavioral of RegistoDeFlags is
 
 begin
-	process(rising_edge(clk))
+	process(clk, ESCR_FLAG, E_FLAG, SEL_FLAG)
 		begin
-			if ESCR_FLAG = '1' then
+			if ESCR_FLAG = '1' and rising_edge(clk) then
 
 					case SEL_FLAG is
 						when "000" => S_FLAG <= E_FLAG(0);
@@ -22,6 +22,7 @@ begin
 						when "010" => S_FLAG <= E_FLAG(2);
 						when "011" => S_FLAG <= E_FLAG(3);
 						when "100" => S_FLAG <= E_FLAG(4);
+						when others => S_FLAG <= 'X';
 					end case;
 			end if;
 	

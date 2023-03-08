@@ -25,20 +25,16 @@ begin
 			when "101" => Resultado <= Operando1 xor Operando2;
 			when "110" => 
 					if Operando1 < Operando2 then	
-					E_FLAG(0) <= '1';
-					end if;
-					if Operando1 <= Operando2 then	
-					E_FLAG(1) <= '1';
+						E_FLAG <= (0 => '1', 1 => '1', others => '0');
 					end if;
 					if Operando1 = Operando2 then	
-					E_FLAG(2) <= '1';
+						E_FLAG <= (1 => '1', 2 => '1', 3 => '1', others => '0');
 					end if;
 					if Operando1 > Operando2 then	
-					E_FLAG(3) <= '1';
+						E_FLAG <= (3 => '1', 4 => '1', others => '0');
 					end if;
-					if Operando1 >= Operando2 then	
-					E_FLAG(4) <= '1';
-					end if;
+
+			when others => Resultado <= (others => 'X'); E_FLAG <= (others => 'X');
 		end case;
 		
 	end process;

@@ -31,9 +31,46 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MUX_R.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MUX_R.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="MUX_R.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MemoriaDeDadosRAM.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MemoriaDeDadosRAM.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="MemoriaDeDadosRAM.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MemoriaDeInstrucoes.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MemoriaDeInstrucoes.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="MemoriaDeInstrucoes.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="MotherBoard.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="MotherBoard.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="MotherBoard.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="MotherBoard.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="MotherBoard.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="MotherBoard.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="MotherBoard.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="MotherBoard.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="MotherBoard.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="MotherBoard.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MotherBoard.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="MotherBoard.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="MotherBoard.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="MotherBoard.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="MotherBoard.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="MotherBoard.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="MotherBoard.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="MotherBoard.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="MotherBoard.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="MotherBoard_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="MotherBoard_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="MotherBoard_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="MotherBoard_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="MotherBoard_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="MotherBoard_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MotherBoard_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MotherBoard_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="MotherBoard_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="MotherBoard_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MotherBoard_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="MotherBoard_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="MotherBoard_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="MotherBoard_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="MotherBoard_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MultiplexerDosRegistos.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MultiplexerDosRegistos.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="MultiplexerDosRegistos.xst"/>
@@ -43,13 +80,129 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PC.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="PC.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="PC.xst"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="PlacaMae.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="PlacaMae.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="PlacaMae.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="PlacaMae.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="PlacaMae.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="PlacaMae.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="PlacaMae.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="PlacaMae.xst"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="PlacaMae_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Processador.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Processador.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Processador.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Processador.ngr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Processador.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Processador.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Processador.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Processador.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Processador_envsettings.html"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Processador_summary.html"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Processador_xst.xrpt"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ROM.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ROM.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="ROM.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RegistoA.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RegistoA.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RegistoA.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RegistoB.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RegistoB.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RegistoB.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="RegistoDeFlags.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="RegistoDeFlags.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="RegistoDeFlags.xst"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1678186436" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1678186436">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1678186436" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-1664404511965234983" xil_pn:start_ts="1678186436">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1678186436" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="8361728618421138023" xil_pn:start_ts="1678186436">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1678186436" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1678186436">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1678186436" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-5383637278727409733" xil_pn:start_ts="1678186436">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1678186436" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1678186436">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1678186436" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="7205995779822802225" xil_pn:start_ts="1678186436">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1678186449" xil_pn:in_ck="2368800710346623992" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-2358995972293639033" xil_pn:start_ts="1678186436">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1678187518" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-5650481097893376969" xil_pn:start_ts="1678187518">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1678187528" xil_pn:in_ck="7084214157422627554" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="465394421101819650" xil_pn:start_ts="1678187518">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1678187552" xil_pn:in_ck="-6089608566877611234" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="-2543691145936091892" xil_pn:start_ts="1678187528">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1678187581" xil_pn:in_ck="-5056845129598449353" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="2516432636991085863" xil_pn:start_ts="1678187552">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+    <transform xil_pn:end_ts="1678187581" xil_pn:in_ck="-6089608566877611366" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416184" xil_pn:start_ts="1678187569">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
+    </transform>
+  </transforms>
 
 </generated_project>

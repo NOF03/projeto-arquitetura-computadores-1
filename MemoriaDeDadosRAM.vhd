@@ -13,7 +13,7 @@ end MemoriaDeDadosRAM;
 architecture Behavioral of MemoriaDeDadosRAM is
 
 begin
-	process(clk)
+	process(clk, WR, Operando1, Constante)
 		type memory is array (0 to 255) of STD_LOGIC_VECTOR(7 downto 0);
 		variable memoria : memory;
 		begin
