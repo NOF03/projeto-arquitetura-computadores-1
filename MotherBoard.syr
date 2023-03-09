@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: MotherBoard.prj
 
@@ -181,10 +181,6 @@ Elaborating entity <MemoriaDeInstrucoes> (architecture <Behavioral>) from librar
 
 Synthesizing Unit <MotherBoard>.
     Related source file is "C:\Users\nunoo\Documents\XilinxProjects\P1\MotherBoard.vhd".
-INFO:Xst:3210 - "C:\Users\nunoo\Documents\XilinxProjects\P1\MotherBoard.vhd" line 50: Output port <Operando2> of the instance <Proc> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\nunoo\Documents\XilinxProjects\P1\MotherBoard.vhd" line 50: Output port <Constante_Out> of the instance <Proc> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\nunoo\Documents\XilinxProjects\P1\MotherBoard.vhd" line 50: Output port <Resultado> of the instance <Proc> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\nunoo\Documents\XilinxProjects\P1\MotherBoard.vhd" line 50: Output port <E_FLAG> of the instance <Proc> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <MotherBoard> synthesized.
@@ -467,8 +463,8 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/gestorPer/POUT
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/gestorPer/POUT_7> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/RF/S_FLAG> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Proc/ALUR/E_FLAG_2> is unconnected in block <MotherBoard>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Proc/ALUR/E_FLAG_3> is unconnected in block <MotherBoard>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Proc/ALUR/E_FLAG_1> is unconnected in block <MotherBoard>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Proc/ALUR/E_FLAG_3> is unconnected in block <MotherBoard>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Proc/ALUR/E_FLAG_4> is unconnected in block <MotherBoard>.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Proc/ALUR/E_FLAG_0> is unconnected in block <MotherBoard>.
 WARNING:Xst:2677 - Node <Proc/gestorPer/Dados_IN_0> of sequential type is unconnected in block <MotherBoard>.
@@ -616,14 +612,14 @@ Cross Clock Domains Report:
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.07 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.55 secs
  
 --> 
 
-Total memory usage is 4618828 kilobytes
+Total memory usage is 4618716 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   99 (   0 filtered)
-Number of infos    :    7 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

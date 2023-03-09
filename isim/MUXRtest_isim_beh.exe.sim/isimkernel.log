@@ -1,0 +1,29 @@
+Command line:
+   MUXRtest_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58452
+
+Thu Mar 09 10:56:21 2023
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5150.97 Meg
+
+ Total Signals          : 12
+ Total Nets             : 42
+ Total Signal Drivers   : 6
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 2
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 402
+Total Line Count : 7
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 5150.97 Meg
+
+Thu Mar 09 10:56:26 2023
+

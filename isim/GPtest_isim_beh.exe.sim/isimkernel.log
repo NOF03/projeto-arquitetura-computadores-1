@@ -1,0 +1,29 @@
+Command line:
+   GPtest_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58435
+
+Thu Mar 09 10:51:51 2023
+
+
+ Elaboration Time: 0.046875 sec
+
+ Current Memory Usage: 5150.91 Meg
+
+ Total Signals          : 12
+ Total Nets             : 34
+ Total Signal Drivers   : 6
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 3
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 395
+Total Line Count : 11
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 5150.91 Meg
+
+Thu Mar 09 10:52:13 2023
+

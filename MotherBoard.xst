@@ -1,6 +1,9 @@
-set -tmpdir "C:/Users/nunoo/Documents/XilinxProjects/P1/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/nunoo/Documents/XilinxProjects/P1/xst"
-run -compileonly yes
+set -tmpdir "xst/projnav.tmp"
+set -xsthdpdir "xst"
+run
+-ifn MotherBoard.prj
+-ofn MotherBoard
+-ofmt NGC
 -p xc7a100t-2-csg324
 -top MotherBoard
 -opt_mode Speed
@@ -47,4 +50,3 @@ run -compileonly yes
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
--ifn MotherBoard.prj

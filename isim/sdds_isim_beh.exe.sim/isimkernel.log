@@ -1,0 +1,29 @@
+Command line:
+   sdds_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58412
+
+Thu Mar 09 10:47:27 2023
+
+
+ Elaboration Time: 0.015625 sec
+
+ Current Memory Usage: 5151.65 Meg
+
+ Total Signals          : 8
+ Total Nets             : 22
+ Total Signal Drivers   : 4
+ Total Blocks           : 4
+ Total Primitive Blocks : 3
+ Total Processes        : 2
+ Total Traceable Variables  : 13
+ Total Scalar Nets and Variables : 505
+Total Line Count : 35
+
+ Total Simulation Time: 0.015625 sec
+
+ Current Memory Usage: 5466.22 Meg
+
+Thu Mar 09 10:48:09 2023
+
