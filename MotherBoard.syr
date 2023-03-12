@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: MotherBoard.prj
 
@@ -154,8 +154,10 @@ Elaborating entity <MotherBoard> (architecture <Struct>) from library <work>.
 Elaborating entity <Processador> (architecture <Struct>) from library <work>.
 
 Elaborating entity <GestorDePerifericos> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\nunoo\Documents\XilinxProjects\P1\GestorDePerifericos.vhd" Line 26: escr_p should be on the sensitivity list of the process
 
 Elaborating entity <MultiplexerDosRegistos> (architecture <Behavioral>) from library <work>.
+INFO:HDLCompiler:679 - "C:\Users\nunoo\Documents\XilinxProjects\P1\MultiplexerDosRegistos.vhd" Line 23. Case statement is complete. others clause is never selected
 
 Elaborating entity <RegistoA> (architecture <Behavioral>) from library <work>.
 
@@ -172,6 +174,7 @@ Elaborating entity <PC> (architecture <Behavioral>) from library <work>.
 Elaborating entity <ROM> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <MemoriaDeDadosRAM> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\nunoo\Documents\XilinxProjects\P1\MemoriaDeDadosRAM.vhd" Line 20: wr should be on the sensitivity list of the process
 
 Elaborating entity <MemoriaDeInstrucoes> (architecture <Behavioral>) from library <work>.
 
@@ -194,7 +197,6 @@ Unit <Processador> synthesized.
 Synthesizing Unit <GestorDePerifericos>.
     Related source file is "C:\Users\nunoo\Documents\XilinxProjects\P1\GestorDePerifericos.vhd".
     Found 8-bit register for signal <POUT>.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
@@ -202,6 +204,7 @@ WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<3>>. Latches may be gen
 WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Dados_IN<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   8 D-type flip-flop(s).
 	inferred   8 Latch(s).
@@ -209,7 +212,7 @@ Unit <GestorDePerifericos> synthesized.
 
 Synthesizing Unit <MultiplexerDosRegistos>.
     Related source file is "C:\Users\nunoo\Documents\XilinxProjects\P1\MultiplexerDosRegistos.vhd".
-    Found 8-bit 4-to-1 multiplexer for signal <Dados_R> created at line 19.
+    Found 8-bit 4-to-1 multiplexer for signal <Dados_R> created at line 18.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <MultiplexerDosRegistos> synthesized.
@@ -265,10 +268,10 @@ Unit <ALU> synthesized.
 
 Synthesizing Unit <RegistoDeFlags>.
     Related source file is "C:\Users\nunoo\Documents\XilinxProjects\P1\RegistoDeFlags.vhd".
-    Found 1-bit register for signal <S_FLAG>.
-    Found 1-bit 5-to-1 multiplexer for signal <SEL_FLAG[2]_X_33_o_Mux_0_o> created at line 19.
+    Found 5-bit register for signal <mem>.
+    Found 1-bit 5-to-1 multiplexer for signal <S_FLAG> created at line 18.
     Summary:
-	inferred   1 D-type flip-flop(s).
+	inferred   5 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 Unit <RegistoDeFlags> synthesized.
 
@@ -280,11 +283,12 @@ Unit <Mux_PC> synthesized.
 
 Synthesizing Unit <PC>.
     Related source file is "C:\Users\nunoo\Documents\XilinxProjects\P1\PC.vhd".
-    Found 8-bit register for signal <Endereco>.
-    Found 8-bit adder for signal <Constante[7]_GND_35_o_add_0_OUT> created at line 23.
+    Found 8-bit register for signal <counter>.
+    Found 8-bit adder for signal <counter[7]_GND_35_o_add_0_OUT> created at line 26.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
 Unit <PC> synthesized.
 
 Synthesizing Unit <ROM>.
@@ -296,18 +300,10 @@ Unit <ROM> synthesized.
 
 Synthesizing Unit <MemoriaDeDadosRAM>.
     Related source file is "C:\Users\nunoo\Documents\XilinxProjects\P1\MemoriaDeDadosRAM.vhd".
+WARNING:Xst:647 - Input <WR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 256x8-bit single-port RAM <Mram_memoria> for signal <memoria>.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   1 RAM(s).
-	inferred   8 Latch(s).
 Unit <MemoriaDeDadosRAM> synthesized.
 
 Synthesizing Unit <MemoriaDeInstrucoes>.
@@ -329,17 +325,18 @@ Macro Statistics
  8-bit adder                                           : 2
  8-bit subtractor                                      : 1
 # Registers                                            : 5
- 1-bit register                                        : 1
+ 5-bit register                                        : 1
  8-bit register                                        : 4
-# Latches                                              : 29
- 1-bit latch                                           : 29
+# Latches                                              : 21
+ 1-bit latch                                           : 21
 # Comparators                                          : 3
  8-bit comparator equal                                : 1
  8-bit comparator greater                              : 2
-# Multiplexers                                         : 16
+# Multiplexers                                         : 17
  1-bit 2-to-1 multiplexer                              : 6
  1-bit 5-to-1 multiplexer                              : 1
  1-bit 6-to-1 multiplexer                              : 8
+ 8-bit 2-to-1 multiplexer                              : 1
  8-bit 4-to-1 multiplexer                              : 1
 # Xors                                                 : 1
  8-bit xor2                                            : 1
@@ -359,7 +356,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_memoria> will be implemented on LUTs
     | Port A                                                              |
     |     aspect ratio   | 256-word x 8-bit                    |          |
     |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <WR>            | high     |
+    |     weA            | connected to signal <VCC>           | high     |
     |     addrA          | connected to signal <Constante>     |          |
     |     diA            | connected to signal <Operando1>     |          |
     |     doA            | connected to internal node          |          |
@@ -379,6 +376,10 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0203> will be implemented on LUTs 
     |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
 Unit <MemoriaDeInstrucoes> synthesized (advanced).
+
+Synthesizing (advanced) Unit <PC>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <PC> synthesized (advanced).
 
 Synthesizing (advanced) Unit <ROM>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0045> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -402,11 +403,13 @@ Macro Statistics
  256x8-bit single-port distributed RAM                 : 1
  32x13-bit single-port distributed Read Only RAM       : 1
  32x15-bit single-port distributed Read Only RAM       : 1
-# Adders/Subtractors                                   : 3
- 8-bit adder                                           : 2
+# Adders/Subtractors                                   : 2
+ 8-bit adder                                           : 1
  8-bit subtractor                                      : 1
-# Registers                                            : 33
- Flip-Flops                                            : 33
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 29
+ Flip-Flops                                            : 29
 # Comparators                                          : 3
  8-bit comparator equal                                : 1
  8-bit comparator greater                              : 2
@@ -426,89 +429,18 @@ Macro Statistics
 
 Optimizing unit <GestorDePerifericos> ...
 
-Optimizing unit <MemoriaDeDadosRAM> ...
-
 Optimizing unit <MotherBoard> ...
 
 Optimizing unit <Processador> ...
-
-Optimizing unit <PC> ...
 
 Optimizing unit <RegistoA> ...
 
 Optimizing unit <RegistoB> ...
 
 Optimizing unit <ALU> ...
-WARNING:Xst:1710 - FF/Latch <Proc/RegB/Operando2_0> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/RegB/Operando2_1> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/RegB/Operando2_2> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/RegB/Operando2_3> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/RegB/Operando2_4> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/RegB/Operando2_5> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/RegB/Operando2_6> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/RegB/Operando2_7> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/PC1/Endereco_1> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/PC1/Endereco_3> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/PC1/Endereco_4> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/PC1/Endereco_5> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/PC1/Endereco_6> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/PC1/Endereco_7> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/gestorPer/POUT_0> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/gestorPer/POUT_1> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/gestorPer/POUT_2> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/gestorPer/POUT_3> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/gestorPer/POUT_4> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/gestorPer/POUT_5> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/gestorPer/POUT_6> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/gestorPer/POUT_7> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Proc/RF/S_FLAG> (without init value) has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Proc/ALUR/E_FLAG_2> is unconnected in block <MotherBoard>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Proc/ALUR/E_FLAG_1> is unconnected in block <MotherBoard>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Proc/ALUR/E_FLAG_3> is unconnected in block <MotherBoard>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Proc/ALUR/E_FLAG_4> is unconnected in block <MotherBoard>.
-WARNING:Xst:1898 - Due to constant pushing, FF/Latch <Proc/ALUR/E_FLAG_0> is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/gestorPer/Dados_IN_0> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/gestorPer/Dados_IN_1> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/gestorPer/Dados_IN_2> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/gestorPer/Dados_IN_3> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/gestorPer/Dados_IN_4> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/gestorPer/Dados_IN_5> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/gestorPer/Dados_IN_7> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/gestorPer/Dados_IN_6> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/PC1/Endereco_2> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/PC1/Endereco_0> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/RegA/Operando1_7> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/RegA/Operando1_6> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/RegA/Operando1_5> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/RegA/Operando1_4> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/RegA/Operando1_3> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/RegA/Operando1_2> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/RegA/Operando1_1> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/RegA/Operando1_0> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/ALUR/Resultado_0> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/ALUR/Resultado_1> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/ALUR/Resultado_2> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/ALUR/Resultado_3> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/ALUR/Resultado_4> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/ALUR/Resultado_5> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/ALUR/Resultado_6> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <Proc/ALUR/Resultado_7> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Mram_memoria8> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Mram_memoria7> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Mram_memoria6> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Mram_memoria5> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Mram_memoria4> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Mram_memoria3> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Mram_memoria2> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Mram_memoria1> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Dados_M_7> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Dados_M_0> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Dados_M_1> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Dados_M_2> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Dados_M_3> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Dados_M_4> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Dados_M_6> of sequential type is unconnected in block <MotherBoard>.
-WARNING:Xst:2677 - Node <RAM/Dados_M_5> of sequential type is unconnected in block <MotherBoard>.
+WARNING:Xst:1293 - FF/Latch <Proc/PC1/counter_7> has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Proc/PC1/counter_6> has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Proc/PC1/counter_5> has a constant value of 0 in block <MotherBoard>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -519,7 +451,10 @@ Final Macro Processing ...
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+
 =========================================================================
 
 =========================================================================
@@ -541,9 +476,30 @@ Top Level Output File Name         : MotherBoard.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1
+# BELS                             : 159
 #      GND                         : 1
-# IO Buffers                       : 8
+#      INV                         : 1
+#      LUT1                        : 4
+#      LUT2                        : 21
+#      LUT3                        : 16
+#      LUT4                        : 1
+#      LUT5                        : 31
+#      LUT6                        : 40
+#      MUXCY                       : 18
+#      MUXF7                       : 4
+#      VCC                         : 1
+#      XORCY                       : 21
+# FlipFlops/Latches                : 55
+#      FDE                         : 29
+#      FDR                         : 5
+#      LD                          : 13
+#      LD_1                        : 8
+# RAMS                             : 8
+#      RAM256X1S                   : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 17
+#      IBUF                        : 9
 #      OBUF                        : 8
 
 Device utilization summary:
@@ -553,19 +509,26 @@ Selected Device : 7a100tcsg324-2
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:              47  out of  126800     0%  
+ Number of Slice LUTs:                  146  out of  63400     0%  
+    Number used as Logic:               114  out of  63400     0%  
+    Number used as Memory:               32  out of  19000     0%  
+       Number used as RAM:               32
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:    162
+   Number with an unused Flip Flop:     115  out of    162    70%  
+   Number with an unused LUT:            16  out of    162     9%  
+   Number of fully used LUT-FF pairs:    31  out of    162    19%  
+   Number of unique control sets:         8
 
 IO Utilization: 
  Number of IOs:                          18
- Number of bonded IOBs:                   8  out of    210     3%  
+ Number of bonded IOBs:                  18  out of    210     8%  
+    IOB Flip Flops/Latches:               8
 
 Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
 
 ---------------------------
 Partition Resource Summary:
@@ -585,7 +548,18 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+---------------------------------------------------------------------------------------+-----------------------------------+-------+
+Clock Signal                                                                           | Clock buffer(FF name)             | Load  |
+---------------------------------------------------------------------------------------+-----------------------------------+-------+
+clk                                                                                    | BUFGP                             | 42    |
+Proc/ESCR_P(Proc/ROMD/Mram__n004531:O)                                                 | NONE(*)(Proc/gestorPer/Dados_IN_7)| 8     |
+Proc/ALUR/SEL_ALU[2]_PWR_21_o_Mux_31_o(Proc/ALUR/Mmux_SEL_ALU[2]_PWR_21_o_Mux_31_o16:O)| NONE(*)(Proc/ALUR/E_FLAG_0)       | 5     |
+Proc/ALUR/SEL_ALU[2]_PWR_13_o_Mux_15_o(Proc/ALUR/SEL_ALU[2]_PWR_13_o_Mux_15_o1:O)      | NONE(*)(Proc/ALUR/Resultado_0)    | 8     |
+---------------------------------------------------------------------------------------+-----------------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -595,9 +569,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: No path found
-   Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Minimum period: 3.112ns (Maximum Frequency: 321.357MHz)
+   Minimum input arrival time before clock: 0.760ns
+   Maximum output required time after clock: 0.737ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -605,21 +579,130 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.112ns (frequency: 321.357MHz)
+  Total number of paths / destination ports: 2318 / 130
+-------------------------------------------------------------------------
+Delay:               3.112ns (Levels of Logic = 4)
+  Source:            Proc/RegA/Operando1_4 (FF)
+  Destination:       Proc/PC1/counter_4 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Proc/RegA/Operando1_4 to Proc/PC1/counter_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.398   0.849  Proc/RegA/Operando1_4 (Proc/RegA/Operando1_4)
+     LUT6:I0->O            1   0.105   0.599  Proc/PC1/ESCR_PC_INV_26_o3 (Proc/PC1/ESCR_PC_INV_26_o3)
+     LUT6:I3->O            2   0.105   0.456  Proc/PC1/ESCR_PC_INV_26_o8_SW1 (N13)
+     LUT5:I3->O            4   0.105   0.374  Proc/PC1/ESCR_PC_INV_26_o8 (Proc/PC1/ESCR_PC_INV_26_o)
+     LUT3:I2->O            1   0.105   0.000  Proc/PC1/Mcount_counter_eqn_41 (Proc/PC1/Mcount_counter_eqn_4)
+     FDR:D                     0.015          Proc/PC1/counter_4
+    ----------------------------------------
+    Total                      3.112ns (0.833ns logic, 2.279ns route)
+                                       (26.8% logic, 73.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              0.760ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       Proc/PC1/counter_4 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to Proc/PC1/counter_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   0.001   0.362  reset_IBUF (reset_IBUF)
+     FDR:R                     0.397          Proc/PC1/counter_0
+    ----------------------------------------
+    Total                      0.760ns (0.398ns logic, 0.362ns route)
+                                       (52.4% logic, 47.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Proc/ESCR_P'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.340ns (Levels of Logic = 1)
+  Source:            PIN<7> (PAD)
+  Destination:       Proc/gestorPer/Dados_IN_7 (LATCH)
+  Destination Clock: Proc/ESCR_P rising
+
+  Data Path: PIN<7> to Proc/gestorPer/Dados_IN_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.339  PIN_7_IBUF (PIN_7_IBUF)
+     LD_1:D                   -0.015          Proc/gestorPer/Dados_IN_7
+    ----------------------------------------
+    Total                      0.340ns (0.001ns logic, 0.339ns route)
+                                       (0.3% logic, 99.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              0.737ns (Levels of Logic = 1)
+  Source:            Proc/gestorPer/POUT_7 (FF)
+  Destination:       POUT<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: Proc/gestorPer/POUT_7 to POUT<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.398   0.339  Proc/gestorPer/POUT_7 (Proc/gestorPer/POUT_7)
+     OBUF:I->O                 0.000          POUT_7_OBUF (POUT<7>)
+    ----------------------------------------
+    Total                      0.737ns (0.398ns logic, 0.339ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock Proc/ALUR/SEL_ALU[2]_PWR_13_o_Mux_15_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    3.778|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Proc/ALUR/SEL_ALU[2]_PWR_21_o_Mux_31_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    3.731|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+--------------------------------------+---------+---------+---------+---------+
+                                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------+---------+---------+---------+---------+
+Proc/ALUR/SEL_ALU[2]_PWR_13_o_Mux_15_o|         |    1.896|         |         |
+Proc/ALUR/SEL_ALU[2]_PWR_21_o_Mux_31_o|         |    0.875|         |         |
+Proc/ESCR_P                           |    2.206|         |         |         |
+clk                                   |    3.112|         |         |         |
+--------------------------------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.55 secs
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.26 secs
  
 --> 
 
-Total memory usage is 4618716 kilobytes
+Total memory usage is 4618816 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   99 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :   27 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

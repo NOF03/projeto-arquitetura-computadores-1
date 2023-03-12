@@ -11,21 +11,25 @@ entity PC is
 end PC;
 
 architecture Behavioral of PC is
-
+signal counter : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
 begin
-	process(clk, ESCR_PC, reset, Constante)
+
+	process(clk)
 	
 	begin
-		if reset = '1' then
-			Endereco <= (others => '0');
-		else 
-			if ESCR_PC = '0' and rising_edge(clk) then
-				Endereco <= Constante + "00000001";
-			else
-				Endereco <= Constante;
+				
+		if rising_edge(clk) then
+			if reset = '1' then
+				counter <= (others => '0');
+			else 
+				if ESCR_PC = '0' then
+					counter <= counter + "00000001";
+				else
+					counter <= Constante;
+				end if;
 			end if;
 		end if;
 		
 	end process;
-
+Endereco <= counter;
 end Behavioral;

@@ -11,7 +11,6 @@ entity MultiplexerDosRegistos is
 end MultiplexerDosRegistos;
 
 architecture Behavioral of MultiplexerDosRegistos is
-
 begin
 	process(Dados_IN, Dados_M, Resultado, Constante, SEL_Data)
 	
@@ -20,9 +19,9 @@ begin
 			when "00" => Dados_R <= Resultado;
 			when "01" => Dados_R <= Dados_IN;
 			when "10" => Dados_R <= Dados_M;
-			when others => Dados_R <= Constante;
+			when "11" => Dados_R <= Constante;
+			when others => Dados_R <= (others => 'X');
 		end case;
 		
 	end process;
-	
 end Behavioral;

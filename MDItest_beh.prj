@@ -1,0 +1,2 @@
+vhdl work "MemoriaDeInstrucoes.vhd"
+vhdl work "MDItest.vhd"

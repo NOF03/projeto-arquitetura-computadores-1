@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to C:/Users/nunoo/Documents/XilinxProjects/P1/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: Processador.prj
 
@@ -71,8 +71,8 @@ Parsing entity <Processador>.
 Parsing architecture <Struct> of entity <processador>.
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.11 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.22 secs
  
 --> 
 

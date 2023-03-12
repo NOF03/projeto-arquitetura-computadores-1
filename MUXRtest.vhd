@@ -1,36 +1,5 @@
---------------------------------------------------------------------------------
--- Company: 
--- Engineer:
---
--- Create Date:   10:52:51 03/09/2023
--- Design Name:   
--- Module Name:   C:/Users/nunoo/Documents/XilinxProjects/P1/MUXRtest.vhd
--- Project Name:  P1
--- Target Device:  
--- Tool versions:  
--- Description:   
--- 
--- VHDL Test Bench Created by ISE for module: MultiplexerDosRegistos
--- 
--- Dependencies:
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
---
--- Notes: 
--- This testbench has been automatically generated using types std_logic and
--- std_logic_vector for the ports of the unit under test.  Xilinx recommends
--- that these types always be used for the top-level I/O of a design in order
--- to guarantee that the testbench will bind correctly to the post-implementation 
--- simulation model.
---------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
- 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---USE ieee.numeric_std.ALL;
  
 ENTITY MUXRtest IS
 END MUXRtest;
@@ -79,13 +48,15 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-      -- hold reset state for 100 ns.
-      Dados_IN <= "00001100"; Dados_M <= "00000001"; Resultado <= "00101001"; Constante <= "00001001"; SEL_Data <= "11"; wait for 100 ns;	
-
-
-      -- insert stimulus here 
-
-      wait;
+	
+      Dados_IN <= "00001100"; Dados_M <= "00000001"; Resultado <= "00101001"; Constante <= "00001001"; 
+		
+		SEL_Data <= "00"; wait for 10 ns;
+		SEL_Data <= "01"; wait for 10 ns;
+		SEL_Data <= "10"; wait for 10 ns;
+		SEL_Data <= "11"; wait for 10 ns;
+		
+      assert FALSE Report "Simulation Finished" severity FAILURE;
    end process;
 
 END;

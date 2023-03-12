@@ -28,7 +28,7 @@ begin
 						E_FLAG <= (0 => '1', 1 => '1', others => '0');
 					end if;
 					if Operando1 = Operando2 then	
-						E_FLAG <= (1 => '1', 2 => '1', 3 => '1', others => '0');
+						E_FLAG <= (1 => '1', 2 => '1', 4 => '1', others => '0');
 					end if;
 					if Operando1 > Operando2 then	
 						E_FLAG <= (3 => '1', 4 => '1', others => '0');

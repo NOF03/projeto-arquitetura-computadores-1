@@ -13,18 +13,20 @@ architecture Behavioral of RegistoDeFlags is
 
 begin
 	process(clk, ESCR_FLAG, E_FLAG, SEL_FLAG)
+	variable mem : STD_LOGIC_VECTOR (4 downto 0);
 		begin
-			if ESCR_FLAG = '1' and rising_edge(clk) then
-
-					case SEL_FLAG is
-						when "000" => S_FLAG <= E_FLAG(0);
-						when "001" => S_FLAG <= E_FLAG(1);
-						when "010" => S_FLAG <= E_FLAG(2);
-						when "011" => S_FLAG <= E_FLAG(3);
-						when "100" => S_FLAG <= E_FLAG(4);
+		case SEL_FLAG is
+						when "000" => S_FLAG <= mem(0);
+						when "001" => S_FLAG <= mem(1);
+						when "010" => S_FLAG <= mem(2);
+						when "011" => S_FLAG <= mem(3);
+						when "100" => S_FLAG <= mem(4);
 						when others => S_FLAG <= 'X';
 					end case;
+			if ESCR_FLAG = '1' and rising_edge(clk) then
+				mem := E_FLAG;
 			end if;
+			
 	
 	end process;
 

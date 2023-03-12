@@ -1,19 +1,46 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/nunoo/Documents/XilinxProjects/P1/MUXRtest_isim_beh.exe -prj C:/Users/nunoo/Documents/XilinxProjects/P1/MUXRtest_beh.prj work.MUXRtest 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/nunoo/Documents/XilinxProjects/P1/MBtest_isim_beh.exe -prj C:/Users/nunoo/Documents/XilinxProjects/P1/MBtest_beh.prj work.MBtest 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 16
 Turning on mult-threading, number of parallel sub-compilation jobs: 32 
 Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/ROM.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/RegistoDeFlags.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/RegistoB.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/RegistoA.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/PC.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/Mux_PC.vhd" into library work
 Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/MultiplexerDosRegistos.vhd" into library work
-Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/MUXRtest.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/GestorDePerifericos.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/ALU.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/Processador.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/MemoriaDeInstrucoes.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/MemoriaDeDadosRAM.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/MBtest.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity GestorDePerifericos [gestordeperifericos_default]
 Compiling architecture behavioral of entity MultiplexerDosRegistos [multiplexerdosregistos_default]
-Compiling architecture behavior of entity muxrtest
+Compiling architecture behavioral of entity RegistoA [registoa_default]
+Compiling architecture behavioral of entity RegistoB [registob_default]
+Compiling architecture behavioral of entity ALU [alu_default]
+Compiling architecture behavioral of entity RegistoDeFlags [registodeflags_default]
+Compiling architecture behavioral of entity Mux_PC [mux_pc_default]
+Compiling architecture behavioral of entity PC [pc_default]
+Compiling architecture behavioral of entity ROM [rom_default]
+Compiling architecture struct of entity Processador [processador_default]
+Compiling architecture behavioral of entity MemoriaDeDadosRAM [memoriadedadosram_default]
+Compiling architecture behavioral of entity MemoriaDeInstrucoes [memoriadeinstrucoes_default]
+Compiling architecture struct of entity MotherBoard [motherboard_default]
+Compiling architecture behavior of entity mbtest
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 5 VHDL Units
-Built simulation executable C:/Users/nunoo/Documents/XilinxProjects/P1/MUXRtest_isim_beh.exe
-Fuse Memory Usage: 30168 KB
-Fuse CPU Usage: 483 ms
+Compiled 32 VHDL Units
+Built simulation executable C:/Users/nunoo/Documents/XilinxProjects/P1/MBtest_isim_beh.exe
+Fuse Memory Usage: 38328 KB
+Fuse CPU Usage: 499 ms
