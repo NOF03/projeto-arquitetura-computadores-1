@@ -1,0 +1,158 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -104 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/nunoo/Documents/XilinxProjects/P1/pa.fromHdl.tcl
+# create_project -name P1 -dir "C:/Users/nunoo/Documents/XilinxProjects/P1/planAhead_run_1" -part xc7a100tcsg324-2
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "MotherBoard.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {ROM.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {RegistoDeFlags.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {RegistoB.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {RegistoA.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {PC.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Mux_PC.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {MultiplexerDosRegistos.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {GestorDePerifericos.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ALU.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Processador.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {MemoriaDeInstrucoes.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {MemoriaDeDadosRAM.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {MotherBoard.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top MotherBoard $srcset
+# add_files [list {MotherBoard.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc7a100tcsg324-2
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/ROM.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/RegistoDeFlags.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/RegistoB.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/RegistoA.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/PC.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/Mux_PC.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/MultiplexerDosRegistos.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/GestorDePerifericos.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/ALU.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/Processador.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/MemoriaDeInstrucoes.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/MemoriaDeDadosRAM.vhd" into library work
+Parsing VHDL file "C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.vhd" into library work
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/ClockBuffers.xml
+Loading clock placement rules from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/artix7/ClockPlacerRules.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/artix7/xc7a100t/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/artix7/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/artix7/drc.xml
+Parsing UCF File [C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.ucf]
+Finished Parsing UCF File [C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: f6fed6db
+open_rtl_design: Time (s): elapsed = 00:00:11 . Memory (MB): peak = 902.691 ; gain = 448.395
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS18 [get_ports [list {POUT[7]} {POUT[6]} {POUT[5]} {POUT[4]} {POUT[3]} {POUT[2]} {POUT[1]} {POUT[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list {PIN[7]} {PIN[6]} {PIN[5]} {PIN[4]} {PIN[3]} {PIN[2]} {PIN[1]} {PIN[0]}]]
+set_property iostandard LVCMOS18 [get_ports [list clk]]
+set_property iostandard LVCMOS18 [get_ports [list reset]]
+startgroup
+set_property package_pin R13 [get_ports {PIN[7]}]
+endgroup
+startgroup
+set_property package_pin U18 [get_ports {PIN[6]}]
+endgroup
+startgroup
+set_property package_pin T18 [get_ports {PIN[5]}]
+endgroup
+startgroup
+set_property package_pin R17 [get_ports {PIN[4]}]
+endgroup
+startgroup
+set_property package_pin R15 [get_ports {PIN[3]}]
+endgroup
+startgroup
+set_property package_pin M13 [get_ports {PIN[2]}]
+endgroup
+startgroup
+set_property package_pin L16 [get_ports {PIN[1]}]
+endgroup
+startgroup
+set_property package_pin J15 [get_ports {PIN[0]}]
+endgroup
+startgroup
+set_property package_pin U16 [get_ports {POUT[7]}]
+endgroup
+startgroup
+set_property package_pin U17 [get_ports {POUT[6]}]
+endgroup
+startgroup
+set_property package_pin V17 [get_ports {POUT[5]}]
+endgroup
+startgroup
+set_property package_pin R18 [get_ports {POUT[4]}]
+endgroup
+startgroup
+set_property package_pin N14 [get_ports {POUT[3]}]
+endgroup
+startgroup
+set_property package_pin J13 [get_ports {POUT[2]}]
+endgroup
+startgroup
+set_property package_pin K15 [get_ports {POUT[1]}]
+endgroup
+startgroup
+set_property package_pin H17 [get_ports {POUT[0]}]
+endgroup
+startgroup
+set_property package_pin E3 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin N17 [get_ports reset]
+endgroup
+startgroup
+set_property package_pin E3 [get_ports clk]
+endgroup
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue Mar 14 10:33:28 2023...
+INFO: [Common 17-83] Releasing license: PlanAhead

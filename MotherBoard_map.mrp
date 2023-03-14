@@ -10,29 +10,70 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -2
 Mapper Version : artix7 -- $Revision: 1.55 $
-Mapped Date    : Tue Mar 07 11:12:09 2023
+Mapped Date    : Tue Mar 14 10:21:24 2023
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   10
+Number of warnings:    3
 Slice Logic Utilization:
-  Number of Slice Registers:                     0 out of 126,800    0%
-  Number of Slice LUTs:                          0 out of  63,400    0%
+  Number of Slice Registers:                    55 out of 126,800    1%
+    Number used as Flip Flops:                  34
+    Number used as Latches:                     21
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                        125 out of  63,400    1%
+    Number used as logic:                       92 out of  63,400    1%
+      Number using O6 output only:              76
+      Number using O5 output only:               3
+      Number using O5 and O6:                   13
+      Number used as ROM:                        0
+    Number used as Memory:                      32 out of  19,000    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:           32
+        Number using O6 output only:            32
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+      Number used as Shift Register:             0
+    Number used exclusively as route-thrus:      1
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         1
+      Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                     0 out of  15,850    0%
-  Number of LUT Flip Flop pairs used:            0
+  Number of occupied Slices:                    45 out of  15,850    1%
+  Number of LUT Flip Flop pairs used:          143
+    Number with an unused Flip Flop:            88 out of     143   61%
+    Number with an unused LUT:                  18 out of     143   12%
+    Number of fully used LUT-FF pairs:          37 out of     143   25%
+    Number of unique control sets:               9
+    Number of slice register sites lost
+      to control set restrictions:               9 out of 126,800    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                         8 out of     210    3%
+  Number of bonded IOBs:                        18 out of     210    8%
+    Number of LOCed IOBs:                       18 out of      18  100%
+    IOB Latches:                                 8
 
 Specific Feature Utilization:
   Number of RAMB36E1/FIFO36E1s:                  0 out of     135    0%
   Number of RAMB18E1/FIFO18E1s:                  0 out of     270    0%
-  Number of BUFG/BUFGCTRLs:                      0 out of      32    0%
+  Number of BUFG/BUFGCTRLs:                      1 out of      32    3%
+    Number used as BUFGs:                        1
+    Number used as BUFGCTRLs:                    0
   Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     300    0%
-  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     300    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        8 out of     300    2%
+    Number used as ILOGICE2s:                    8
+  Number used as  ILOGICE3s:                     0
+    Number used as ISERDESE2s:                   0
   Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0
   Number of OLOGICE2/OLOGICE3/OSERDESE2s:        0 out of     300    0%
   Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      24    0%
@@ -58,9 +99,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of XADCs:                               0 out of       1    0%
 
-Peak Memory Usage:  4974 MB
-Total REAL time to MAP completion:  21 secs 
-Total CPU time to MAP completion:   18 secs 
+Average Fanout of Non-Clock Nets:                4.40
+
+Peak Memory Usage:  5007 MB
+Total REAL time to MAP completion:  26 secs 
+Total CPU time to MAP completion:   25 secs 
 
 Table of Contents
 -----------------
@@ -83,61 +126,20 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
-WARNING:LIT:701 - PAD symbol "POUT<7>" has an undefined IOSTANDARD.
-WARNING:LIT:702 - PAD symbol "POUT<7>" is not constrained (LOC) to a specific
-   location.
-WARNING:PhysDesignRules:2452 - The IOB POUT<0> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB POUT<1> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB POUT<2> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB POUT<3> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB POUT<4> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB POUT<5> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB POUT<6> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
-WARNING:PhysDesignRules:2452 - The IOB POUT<7> is either not constrained (LOC)
-   to a specific location and/or has an undefined I/O Standard (IOSTANDARD).
-   This condition may seriously affect the device and will be an error in
-   bitstream creation. It should be corrected by properly specifying the pin
-   location and I/O Standard.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net WR is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Proc/ALUR/SEL_ALU[2]_PWR_21_o_Mux_31_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   Proc/ALUR/SEL_ALU[2]_PWR_13_o_Mux_15_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
-INFO:LIT:243 - Logical network PIN<7> has no load.
-INFO:LIT:395 - The above info message is repeated 9 more times for the following
-   (max. 5 shown):
-   PIN<6>,
-   PIN<5>,
-   PIN<4>,
-   PIN<3>,
-   PIN<2>
-   To see the details of these info messages, please use the -detail switch.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
    rate limited output drivers. The delay on speed critical single ended outputs
    can be dramatically reduced by designating them as fast outputs.
@@ -151,7 +153,7 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-   1 block(s) optimized away
+   2 block(s) optimized away
 
 Section 5 - Removed Logic
 -------------------------
@@ -159,6 +161,10 @@ Section 5 - Removed Logic
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
 
 Section 6 - IOB Properties
 --------------------------
@@ -167,6 +173,14 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| PIN<0>                             | IOB              | INPUT     | LVCMOS18             |       |          |      | ILATCH       |          |          |
+| PIN<1>                             | IOB              | INPUT     | LVCMOS18             |       |          |      | ILATCH       |          |          |
+| PIN<2>                             | IOB              | INPUT     | LVCMOS18             |       |          |      | ILATCH       |          |          |
+| PIN<3>                             | IOB              | INPUT     | LVCMOS18             |       |          |      | ILATCH       |          |          |
+| PIN<4>                             | IOB              | INPUT     | LVCMOS18             |       |          |      | ILATCH       |          |          |
+| PIN<5>                             | IOB              | INPUT     | LVCMOS18             |       |          |      | ILATCH       |          |          |
+| PIN<6>                             | IOB              | INPUT     | LVCMOS18             |       |          |      | ILATCH       |          |          |
+| PIN<7>                             | IOB              | INPUT     | LVCMOS18             |       |          |      | ILATCH       |          |          |
 | POUT<0>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 | POUT<1>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 | POUT<2>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
@@ -175,6 +189,8 @@ Section 6 - IOB Properties
 | POUT<5>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 | POUT<6>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
 | POUT<7>                            | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| clk                                | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| reset                              | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\nunoo\Documents\XilinxProjects\P1\MotherBoard.ncd
+OUTFILE=C:\Users\nunoo\Documents\XilinxProjects\P1\MotherBoard.bit
+FAMILY=Artix7
+PART=xc7a100t-2csg324
+WORKINGDIR=C:\Users\nunoo\Documents\XilinxProjects\P1
+LICENSE=WebPack
+USER_INFO=212337016_0_0_255

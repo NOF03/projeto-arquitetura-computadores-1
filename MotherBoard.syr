@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.07 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: MotherBoard.prj
 
@@ -160,8 +160,10 @@ Elaborating entity <MultiplexerDosRegistos> (architecture <Behavioral>) from lib
 INFO:HDLCompiler:679 - "C:\Users\nunoo\Documents\XilinxProjects\P1\MultiplexerDosRegistos.vhd" Line 23. Case statement is complete. others clause is never selected
 
 Elaborating entity <RegistoA> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\nunoo\Documents\XilinxProjects\P1\RegistoA.vhd" Line 18: sel_r should be on the sensitivity list of the process
 
 Elaborating entity <RegistoB> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:92 - "C:\Users\nunoo\Documents\XilinxProjects\P1\RegistoB.vhd" Line 18: sel_r should be on the sensitivity list of the process
 
 Elaborating entity <ALU> (architecture <Behavioral>) from library <work>.
 
@@ -174,7 +176,6 @@ Elaborating entity <PC> (architecture <Behavioral>) from library <work>.
 Elaborating entity <ROM> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <MemoriaDeDadosRAM> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:92 - "C:\Users\nunoo\Documents\XilinxProjects\P1\MemoriaDeDadosRAM.vhd" Line 20: wr should be on the sensitivity list of the process
 
 Elaborating entity <MemoriaDeInstrucoes> (architecture <Behavioral>) from library <work>.
 
@@ -300,10 +301,18 @@ Unit <ROM> synthesized.
 
 Synthesizing Unit <MemoriaDeDadosRAM>.
     Related source file is "C:\Users\nunoo\Documents\XilinxProjects\P1\MemoriaDeDadosRAM.vhd".
-WARNING:Xst:647 - Input <WR> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 256x8-bit single-port RAM <Mram_memoria> for signal <memoria>.
+WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <Dados_M<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
     Summary:
 	inferred   1 RAM(s).
+	inferred   8 Latch(s).
 Unit <MemoriaDeDadosRAM> synthesized.
 
 Synthesizing Unit <MemoriaDeInstrucoes>.
@@ -327,8 +336,8 @@ Macro Statistics
 # Registers                                            : 5
  5-bit register                                        : 1
  8-bit register                                        : 4
-# Latches                                              : 21
- 1-bit latch                                           : 21
+# Latches                                              : 29
+ 1-bit latch                                           : 29
 # Comparators                                          : 3
  8-bit comparator equal                                : 1
  8-bit comparator greater                              : 2
@@ -356,7 +365,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_memoria> will be implemented on LUTs
     | Port A                                                              |
     |     aspect ratio   | 256-word x 8-bit                    |          |
     |     clkA           | connected to signal <clk>           | rise     |
-    |     weA            | connected to signal <VCC>           | high     |
+    |     weA            | connected to signal <WR>            | high     |
     |     addrA          | connected to signal <Constante>     |          |
     |     diA            | connected to signal <Operando1>     |          |
     |     doA            | connected to internal node          |          |
@@ -429,6 +438,8 @@ Macro Statistics
 
 Optimizing unit <GestorDePerifericos> ...
 
+Optimizing unit <MemoriaDeDadosRAM> ...
+
 Optimizing unit <MotherBoard> ...
 
 Optimizing unit <Processador> ...
@@ -476,24 +487,24 @@ Top Level Output File Name         : MotherBoard.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 159
+# BELS                             : 147
 #      GND                         : 1
 #      INV                         : 1
 #      LUT1                        : 4
 #      LUT2                        : 21
-#      LUT3                        : 16
+#      LUT3                        : 10
 #      LUT4                        : 1
-#      LUT5                        : 31
-#      LUT6                        : 40
+#      LUT5                        : 36
+#      LUT6                        : 32
 #      MUXCY                       : 18
-#      MUXF7                       : 4
+#      MUXF7                       : 1
 #      VCC                         : 1
 #      XORCY                       : 21
-# FlipFlops/Latches                : 55
+# FlipFlops/Latches                : 63
 #      FDE                         : 29
 #      FDR                         : 5
 #      LD                          : 13
-#      LD_1                        : 8
+#      LD_1                        : 16
 # RAMS                             : 8
 #      RAM256X1S                   : 8
 # Clock Buffers                    : 1
@@ -509,18 +520,18 @@ Selected Device : 7a100tcsg324-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              47  out of  126800     0%  
- Number of Slice LUTs:                  146  out of  63400     0%  
-    Number used as Logic:               114  out of  63400     0%  
+ Number of Slice Registers:              55  out of  126800     0%  
+ Number of Slice LUTs:                  137  out of  63400     0%  
+    Number used as Logic:               105  out of  63400     0%  
     Number used as Memory:               32  out of  19000     0%  
        Number used as RAM:               32
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    162
-   Number with an unused Flip Flop:     115  out of    162    70%  
-   Number with an unused LUT:            16  out of    162     9%  
-   Number of fully used LUT-FF pairs:    31  out of    162    19%  
-   Number of unique control sets:         8
+ Number of LUT Flip Flop pairs used:    151
+   Number with an unused Flip Flop:      96  out of    151    63%  
+   Number with an unused LUT:            14  out of    151     9%  
+   Number of fully used LUT-FF pairs:    41  out of    151    27%  
+   Number of unique control sets:         9
 
 IO Utilization: 
  Number of IOs:                          18
@@ -555,8 +566,9 @@ clk                                                                             
 Proc/ESCR_P(Proc/ROMD/Mram__n004531:O)                                                 | NONE(*)(Proc/gestorPer/Dados_IN_7)| 8     |
 Proc/ALUR/SEL_ALU[2]_PWR_21_o_Mux_31_o(Proc/ALUR/Mmux_SEL_ALU[2]_PWR_21_o_Mux_31_o16:O)| NONE(*)(Proc/ALUR/E_FLAG_0)       | 5     |
 Proc/ALUR/SEL_ALU[2]_PWR_13_o_Mux_15_o(Proc/ALUR/SEL_ALU[2]_PWR_13_o_Mux_15_o1:O)      | NONE(*)(Proc/ALUR/Resultado_0)    | 8     |
+WR(Proc/ROMD/Mram__n004571:O)                                                          | NONE(*)(RAM/Dados_M_7)            | 8     |
 ---------------------------------------------------------------------------------------+-----------------------------------+-------+
-(*) These 3 clock signal(s) are generated by combinatorial logic,
+(*) These 4 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
 Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -569,7 +581,7 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 3.112ns (Maximum Frequency: 321.357MHz)
+   Minimum period: 3.168ns (Maximum Frequency: 315.667MHz)
    Minimum input arrival time before clock: 0.760ns
    Maximum output required time after clock: 0.737ns
    Maximum combinational path delay: No path found
@@ -580,28 +592,26 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 3.112ns (frequency: 321.357MHz)
-  Total number of paths / destination ports: 2318 / 130
+  Clock period: 3.168ns (frequency: 315.667MHz)
+  Total number of paths / destination ports: 2106 / 138
 -------------------------------------------------------------------------
-Delay:               3.112ns (Levels of Logic = 4)
-  Source:            Proc/RegA/Operando1_4 (FF)
-  Destination:       Proc/PC1/counter_4 (FF)
+Delay:               3.168ns (Levels of Logic = 2)
+  Source:            Proc/PC1/counter_0 (FF)
+  Destination:       RAM/Mram_memoria8 (RAM)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: Proc/RegA/Operando1_4 to Proc/PC1/counter_4
+  Data Path: Proc/PC1/counter_0 to RAM/Mram_memoria8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             11   0.398   0.849  Proc/RegA/Operando1_4 (Proc/RegA/Operando1_4)
-     LUT6:I0->O            1   0.105   0.599  Proc/PC1/ESCR_PC_INV_26_o3 (Proc/PC1/ESCR_PC_INV_26_o3)
-     LUT6:I3->O            2   0.105   0.456  Proc/PC1/ESCR_PC_INV_26_o8_SW1 (N13)
-     LUT5:I3->O            4   0.105   0.374  Proc/PC1/ESCR_PC_INV_26_o8 (Proc/PC1/ESCR_PC_INV_26_o)
-     LUT3:I2->O            1   0.105   0.000  Proc/PC1/Mcount_counter_eqn_41 (Proc/PC1/Mcount_counter_eqn_4)
-     FDR:D                     0.015          Proc/PC1/counter_4
+     FDR:C->Q             13   0.398   0.848  Proc/PC1/counter_0 (Proc/PC1/counter_0)
+     LUT5:I0->O           19   0.105   0.881  MDI/Mram__n020321 (opcode<2>)
+     LUT5:I0->O           16   0.105   0.422  Proc/ROMD/Mram__n004571 (WR)
+     RAM256X1S:WE              0.408          RAM/Mram_memoria1
     ----------------------------------------
-    Total                      3.112ns (0.833ns logic, 2.279ns route)
-                                       (26.8% logic, 73.2% route)
+    Total                      3.168ns (1.016ns logic, 2.152ns route)
+                                       (32.1% logic, 67.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -670,7 +680,7 @@ Clock to Setup on destination clock Proc/ALUR/SEL_ALU[2]_PWR_13_o_Mux_15_o
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    3.778|         |
+clk            |         |         |    3.741|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock Proc/ALUR/SEL_ALU[2]_PWR_21_o_Mux_31_o
@@ -681,28 +691,37 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 clk            |         |         |    3.731|         |
 ---------------+---------+---------+---------+---------+
 
+Clock to Setup on destination clock WR
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.904|         |         |         |
+---------------+---------+---------+---------+---------+
+
 Clock to Setup on destination clock clk
 --------------------------------------+---------+---------+---------+---------+
                                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------+---------+---------+---------+---------+
-Proc/ALUR/SEL_ALU[2]_PWR_13_o_Mux_15_o|         |    1.896|         |         |
+Proc/ALUR/SEL_ALU[2]_PWR_13_o_Mux_15_o|         |    1.888|         |         |
 Proc/ALUR/SEL_ALU[2]_PWR_21_o_Mux_31_o|         |    0.875|         |         |
-Proc/ESCR_P                           |    2.206|         |         |         |
-clk                                   |    3.112|         |         |         |
+Proc/ESCR_P                           |    1.900|         |         |         |
+WR                                    |    1.756|         |         |         |
+clk                                   |    3.168|         |         |         |
 --------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 6.26 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.13 secs
  
 --> 
 
-Total memory usage is 4618816 kilobytes
+Total memory usage is 4617732 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   27 (   0 filtered)
+Number of warnings :   35 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 

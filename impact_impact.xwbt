@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\nunoo\Documents\XilinxProjects\P1\impact.xsl
+OUTFILE=C:\Users\nunoo\Documents\XilinxProjects\P1\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=C:\Users\nunoo\Documents\XilinxProjects\P1
+LICENSE=iMPACT
+USER_INFO=iMPACT

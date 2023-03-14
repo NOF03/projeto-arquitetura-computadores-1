@@ -4,7 +4,7 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2
 -n 3 -fastpaths -xml MotherBoard.twx MotherBoard.ncd -o MotherBoard.twr
-MotherBoard.pcf
+MotherBoard.pcf -ucf MotherBoard.ucf
 
 Design file:              MotherBoard.ncd
 Physical constraint file: MotherBoard.pcf
@@ -30,11 +30,41 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 
 Data Sheet report:
 -----------------
-No constraints were found to generate data for the Data Sheet Report section.
-Use the Advanced Analysis (-a) option or generate global constraints for each
-clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+All values displayed in nanoseconds (ns)
 
-Analysis completed Tue Mar 07 11:13:00 2023 
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+reset       |   -0.297(R)|      FAST  |    2.536(R)|      SLOW  |clk_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+POUT<0>     |         8.884(R)|      SLOW  |         3.349(R)|      FAST  |clk_BUFGP         |   0.000|
+POUT<1>     |         8.764(R)|      SLOW  |         3.330(R)|      FAST  |clk_BUFGP         |   0.000|
+POUT<2>     |         9.290(R)|      SLOW  |         3.603(R)|      FAST  |clk_BUFGP         |   0.000|
+POUT<3>     |         8.403(R)|      SLOW  |         3.145(R)|      FAST  |clk_BUFGP         |   0.000|
+POUT<4>     |         8.557(R)|      SLOW  |         3.203(R)|      FAST  |clk_BUFGP         |   0.000|
+POUT<5>     |         9.035(R)|      SLOW  |         3.473(R)|      FAST  |clk_BUFGP         |   0.000|
+POUT<6>     |         8.879(R)|      SLOW  |         3.377(R)|      FAST  |clk_BUFGP         |   0.000|
+POUT<7>     |         8.819(R)|      SLOW  |         3.367(R)|      FAST  |clk_BUFGP         |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.351|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue Mar 14 10:22:21 2023 
 --------------------------------------------------------------------------------
 
 Trace Settings:
