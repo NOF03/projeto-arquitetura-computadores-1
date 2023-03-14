@@ -45,7 +45,7 @@ begin
 			when "10010" => SEL_ALU <= "XXX";  ESCR_P <= '0';  SEL_Data <= "XX";  ESCR_R <= '0';  WR <= '0';  SEL_PC <= "010";  ESCR_FLAG <= '0';  SEL_FLAG <= "XXX";
 			when "10011" => SEL_ALU <= "XXX";  ESCR_P <= '0';  SEL_Data <= "XX";  ESCR_R <= '0';  WR <= '0';  SEL_PC <= "100";  ESCR_FLAG <= '0';  SEL_FLAG <= "XXX";
 		--Outros
-			when others => SEL_ALU <= "XXX";  ESCR_P <= '0';  SEL_Data <= "XX";  ESCR_R <= '0';  WR <= '0';  SEL_PC <= "011";  ESCR_FLAG <= '0';  SEL_FLAG <= "XXX";
+			when others  => SEL_ALU <= "XXX";  ESCR_P <= '0';  SEL_Data <= "XX";  ESCR_R <= '0';  WR <= '0';  SEL_PC <= "011";  ESCR_FLAG <= '0';  SEL_FLAG <= "XXX";
 		end case;
 	end process;
 

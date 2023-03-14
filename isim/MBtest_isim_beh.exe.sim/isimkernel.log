@@ -2,24 +2,24 @@ Command line:
    MBtest_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  60995
+     -socket  57773
 
-Sat Mar 11 23:31:05 2023
+Tue Mar 14 00:27:59 2023
 
 
- Elaboration Time: 0.046875 sec
+ Elaboration Time: 0.03125 sec
 
- Current Memory Usage: 5155.32 Meg
+ Current Memory Usage: 5151.17 Meg
 
- Total Signals          : 102
- Total Nets             : 2174
- Total Signal Drivers   : 28
+ Total Signals          : 101
+ Total Nets             : 126
+ Total Signal Drivers   : 27
  Total Blocks           : 18
  Total Primitive Blocks : 15
- Total Processes        : 17
+ Total Processes        : 16
  Total Traceable Variables  : 16
- Total Scalar Nets and Variables : 2676
-Total Line Count : 121
+ Total Scalar Nets and Variables : 628
+Total Line Count : 122
 
 ** Failure:Simulation Finished
 User(VHDL) Code Called Simulation Stop
@@ -29,7 +29,7 @@ In process MBtest.vhd:stim_proc
 
  Total Simulation Time: 0.0625 sec
 
- Current Memory Usage: 4683.46 Meg
+ Current Memory Usage: 5151.17 Meg
 
-Sat Mar 11 23:34:42 2023
+Tue Mar 14 00:28:28 2023
 

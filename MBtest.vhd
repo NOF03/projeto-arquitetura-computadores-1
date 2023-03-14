@@ -48,17 +48,20 @@ BEGIN
 		wait for clk_period/2;
    end process;
  
-
+	-- POUT <= -1 ( 0 <= PIN <= 10 )
+   -- POUT <= -PIN - 14 ( PIN < 0 )
+	-- POUT <= PIN * 3 ( PIN > 10 ) Se PIN > 43 ocorre overload.
+	
    -- Stimulus process
    stim_proc: process
    begin		
 
-      reset <= '1'; wait for Clk_period*2;
-		reset <= '0'; PIN <= "00000111"; wait for clk_period*8; -- POUT <= -1 ( 0 <= PIN <= 10 )
-		reset <= '1'; wait for Clk_period*2;
-		reset <= '0'; PIN <= "11111111"; wait for clk_period*11; -- POUT <= -PIN - 14 ( PIN < 0 )
-		reset <= '1'; wait for Clk_period*2;
-		reset <= '0'; PIN <= "00001100"; wait for clk_period*40; -- POUT <= PIN * 2 ( PIN > 10 )
+      reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "00001111"; wait for clk_period*40; 
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "11100111"; wait for clk_period*11; 
+		reset <= '1'; wait for clk_period*2;
+		reset <= '0'; PIN <= "00000111"; wait for clk_period*8; 
 
 		assert FALSE Report "Simulation Finished" severity FAILURE;
 	end process;

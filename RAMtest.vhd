@@ -61,7 +61,7 @@ BEGIN
 		WR <= '0'; Operando1 <= "11111111"; Constante <= "00001010";  wait for clk_period*10;
 		WR <= '0'; Operando1 <= "10101010"; Constante <= "01111001";  wait for clk_period*10;
 
-      wait;
+      assert FALSE Report "Simulation Finished" severity FAILURE;
    end process;
 
 END;

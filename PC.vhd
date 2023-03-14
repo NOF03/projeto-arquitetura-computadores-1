@@ -15,7 +15,7 @@ signal counter : STD_LOGIC_VECTOR(7 downto 0) := (others => '0');
 begin
 
 	process(clk)
-	
+
 	begin
 				
 		if rising_edge(clk) then
