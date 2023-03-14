@@ -160,6 +160,10 @@
     <transform xil_pn:end_ts="1678753675" xil_pn:in_ck="5633775595108763536" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1678753675">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.vhd"/>
       <outfile xil_pn:name="ALUtest.vhd"/>
       <outfile xil_pn:name="GPtest.vhd"/>
@@ -200,6 +204,11 @@
     <transform xil_pn:end_ts="1678753675" xil_pn:in_ck="5633775595108763536" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1678753675">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.vhd"/>
       <outfile xil_pn:name="ALUtest.vhd"/>
       <outfile xil_pn:name="GPtest.vhd"/>
@@ -228,6 +237,11 @@
     <transform xil_pn:end_ts="1678753678" xil_pn:in_ck="5633775595108763536" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="5324199934091531411" xil_pn:start_ts="1678753675">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MBtest_beh.prj"/>
       <outfile xil_pn:name="MBtest_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -238,6 +252,9 @@
     <transform xil_pn:end_ts="1678753678" xil_pn:in_ck="-5336416078508386257" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-3958989509067722272" xil_pn:start_ts="1678753678">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="MBtest_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>

@@ -10,13 +10,13 @@
          <ClosedNode>/PlacaMae - Struct C:|Users|nunoo|Documents|XilinxProjects|P1|PlacaMae.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>MotherBoard - Struct (C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.vhd)</SelectedItem>
+         <SelectedItem>MDI - MemoriaDeInstrucoes - Behavioral (C:/Users/nunoo/Documents/XilinxProjects/P1/MemoriaDeInstrucoes.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001f2000000020000000000000000000000000200000064ffffffff000000810000000300000002000001f20000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>MotherBoard - Struct (C:/Users/nunoo/Documents/XilinxProjects/P1/MotherBoard.vhd)</CurrentItem>
+      <CurrentItem>MDI - MemoriaDeInstrucoes - Behavioral (C:/Users/nunoo/Documents/XilinxProjects/P1/MemoriaDeInstrucoes.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -60,7 +60,7 @@
       <CurrentItem>work</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001100000010f01000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
@@ -100,7 +100,7 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/ALUtest - behavior C:|Users|nunoo|Documents|XilinxProjects|P1|ALUtest.vhd</ClosedNode>
          <ClosedNode>/GPtest - behavior C:|Users|nunoo|Documents|XilinxProjects|P1|GPtest.vhd</ClosedNode>
-         <ClosedNode>/MBtest - behavior C:|Users|nunoo|Documents|XilinxProjects|P1|MBtest.vhd/uut - MotherBoard - Struct/Proc - Processador - Struct</ClosedNode>
+         <ClosedNode>/MBtest - behavior C:|Users|nunoo|Documents|XilinxProjects|P1|MBtest.vhd</ClosedNode>
          <ClosedNode>/MDItest - behavior C:|Users|nunoo|Documents|XilinxProjects|P1|MDItest.vhd</ClosedNode>
          <ClosedNode>/MUXRtest - behavior C:|Users|nunoo|Documents|XilinxProjects|P1|MUXRtest.vhd</ClosedNode>
          <ClosedNode>/MotherBoard - Struct C:|Users|nunoo|Documents|XilinxProjects|P1|MotherBoard.vhd</ClosedNode>
@@ -115,13 +115,13 @@
          <ClosedNode>/sdds - behavior C:|Users|nunoo|Documents|XilinxProjects|P1|sdds.vhd</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>MDI - MemoriaDeInstrucoes - Behavioral (C:/Users/nunoo/Documents/XilinxProjects/P1/MemoriaDeInstrucoes.vhd)</SelectedItem>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001e7000000020000000000000000000000000200000064ffffffff000000810000000300000002000001e70000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000107000000020000000000000000000000000200000064ffffffff000000810000000300000002000001070000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>MDI - MemoriaDeInstrucoes - Behavioral (C:/Users/nunoo/Documents/XilinxProjects/P1/MemoriaDeInstrucoes.vhd)</CurrentItem>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -129,13 +129,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001e4000000010000000100000000000000000000000064ffffffff000000810000000000000001000001e40000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>

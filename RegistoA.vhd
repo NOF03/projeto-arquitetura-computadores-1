@@ -12,7 +12,7 @@ end RegistoA;
 architecture Behavioral of RegistoA is
 
 begin
-	process(Dados_R, SEL_R, ESCR_R, clk)
+	process(clk)
 	
 		begin 
 			if SEL_R = '0' and rising_edge(clk) and ESCR_R = '1' then
